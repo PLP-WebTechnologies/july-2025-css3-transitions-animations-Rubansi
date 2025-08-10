@@ -1,0 +1,32 @@
+/* styles.css */
+
+/* Basic box style */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    margin: 20px auto;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, transform 0.5s ease; /* CSS Transitions */
+}
+
+/* When active, change background and scale */
+.box.active {
+    background-color: #e74c3c;
+    transform: scale(1.5);
+}
+
+/* Keyframe Animation - bouncing effect */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+/* Class to trigger bounce animation */
+.bounce {
+    animation: bounce 1s ease infinite;
+}
